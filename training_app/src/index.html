@@ -28,27 +28,51 @@
        ** on the JET website for more information on how to use this pattern.
     -->
           <header role="banner" class="oj-web-applayout-header">
-              <div class="oj-web-applayout-max-width oj-flex-bar oj-sm-align-items-center">
+              <div class="oj-web-applayout-max-width oj-flex-bar oj-sm-align-items-center"  style="background:#FDFEFE;">
                   <div class="oj-flex-bar-middle oj-sm-align-items-baseline">
                       <span role="img" class="oj-icon demo-oracle-icon" title="Oracle Logo" alt="Oracle Logo"></span>
                       <h1 class="oj-sm-only-hide oj-web-applayout-header-title" title="Application Name"><oj-bind-text value="[[appName]]"></oj-bind-text></h1>
                   </div>
                   <div class="oj-flex-bar-end">
                       <!-- Responsive Toolbar -->
-                      <oj-toolbar>
-                          <oj-menu-button id="userMenu" display="[[smScreen() ? 'icons' : 'all']]" chroming="half">
-                              <span><oj-bind-text value="[[userLogin]]"></oj-bind-text></span>
-                              <span slot="endIcon" :class="[[{'oj-icon demo-appheader-avatar': smScreen(), 'oj-component-icon oj-button-menu-dropdown-icon': !smScreen()}]]"></span>
-                              <oj-menu id="menu1" slot="menu" style="display:none">
-                                  <oj-option id="pref" value="pref">Preferences</oj-option>
-                                  <oj-option id="help" value="help">Help</oj-option>
-                                  <oj-option id="about" value="about">About</oj-option>
-                                  <oj-option id="out" value="out">Sign Out</oj-option>
-                              </oj-menu>
-                          </oj-menu-button>
-                      </oj-toolbar>
+                      <div id="tabbardemo" style="height:75px;background:#FDFEFE;">
+                          <oj-tab-bar selection="home1" edge="top"
+                                      class="oj-md-condense oj-md-align-items-center oj-md-justify-content-center oj-lg-justify-content-flex-end">
+                              <ul>
+                                  <li id="home1">
+                                      <a href="#">
+                                       
+                                          Home
+                                      </a>
+                                  </li>
+                                  <li id="gettingstarted1">
+                                      <a href="#">
+                                         
+                                          What is tech consulting?
+                                      </a>
+                                  </li>
+                                  <li id="cookbook1">
+                                      <a href="#">
+                                          
+                                          Meet the team
+                                      </a>
+                                  </li>
+                                  <li id="library1">
+                                      <a href="#">
+                                          
+                                          Interview process
+                                      </a>
+                                  </li>
+                              </ul>
+                          </oj-tab-bar>
+
+                             
+                              </oj-menu-button>
+                          
+                      </div>
                   </div>
               </div>
+             
           </header>
         
           <div class="hero-image">
@@ -73,23 +97,23 @@
                       <div class="demo-flex-display oj-flex-items-pad">
                           <div class="oj-flex">
                               <div class="oj-flex-item oj-sm-flex-1 oj-panel demo-mypanel">
-                                  <h3>What is tech consulting?</h3>
+                                  <h3 style="font-family: 'Avenir LT Std 65 Medium'">What is tech consulting?</h3>
                                   <div class="oj-flex-item oj-sm-flex-1 mypanel-text">
-                                      <div> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolorecia deserunt mollit anim id est laborum</div>
+                                      <div style="font-size:16px;font-family: 'Avenir LT Std 35 Light'"> The Class Of Technology Consulting program helps recent college graduates quickly design, develop, and deliver Oracle technology solutions in Oracle Cloud. </div>
                                   </div>
                               </div>
                               <div class="oj-flex-item oj-sm-flex-1 oj-panel demo-mypanel">
-                                  <h3>Meet the team</h3>
+                                  <h3 style="font-family: 'Avenir LT Std 65 Medium'">Meet the team</h3>
                                   <div class="oj-flex-item oj-sm-flex-1 mypanel-text">
-                                      
-                                      <div> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolorecia deserunt mollit anim id est laborum</div>
-                                      <a href="team.html">view more</a>                                  
+
+                                      <div style="font-size:16px;font-family: 'Avenir LT Std 35 Light'">Oracle Tech Consulting is made up of seven unique teams that specialize in different Oracle products. Find out what our teams are up to!</div>
+                                      <a href="team.html">view more</a>
                                   </div>
                               </div>
                               <div class="oj-flex-item oj-sm-flex-1 oj-panel demo-mypanel">
-                                  <h3>The interview process</h3>
+                                  <h3 style="font-family: 'Avenir LT Std 65 Medium'">The interview process</h3>
                                   <div class="oj-flex-item oj-sm-flex-1 mypanel-text">
-                                      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolorecia deserunt mollit anim id est laborum </div>
+                                      <div style="font-size:16px; font-family: 'Avenir LT Std 35 Light' ">Apply to Oracle Class of Tech Consulting and find out what to expect from the interiew process.</div>
                                   </div>
                               </div>
                           </div>
@@ -99,6 +123,8 @@
                   <div class="oj-flex oj-flex-init oj-panel oj-panel-alt1">
                       <h2>video</h2>
                   </div>
+
+                  
               </div>
               <footer class="oj-web-applayout-footer" role="contentinfo">
                   <div class="oj-web-applayout-footer-item oj-web-applayout-max-width">

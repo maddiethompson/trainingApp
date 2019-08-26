@@ -3,12 +3,11 @@
     "",
     "\\src",
     "\\src\\css",
+    "\\src\\css\\fonts",
     "\\src\\css\\images",
     "\\src\\js",
-    "\\src\\js\\viewModels\\filmStrip",
-    "\\src\\js\\views",
-    "\\src\\js\\views\\filmStrip"
+    "\\src\\js\\views"
   ],
-  "SelectedNode": "\\src\\css\\images\\oracle_sample.png",
+  "SelectedNode": "\\src\\css\\fonts\\AvenirLTStd-Book.woff",
   "PreviewInSolutionExplorer": false
 }

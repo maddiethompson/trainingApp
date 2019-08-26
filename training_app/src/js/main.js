@@ -44,7 +44,7 @@ requirejs.config(
  * by some modules), we are listing it explicitly to get the reference to the 'ko'
  * object in the callback
  */
-require(['ojs/ojbootstrap', 'knockout', 'appController', 'ojs/ojknockout', 'ojs/ojbutton', 'ojs/ojtoolbar', 'ojs/ojmenu'],
+require(['ojs/ojbootstrap', 'knockout', 'appController', 'ojs/ojknockout', 'ojs/ojbutton', 'ojs/ojtoolbar', 'ojs/ojmenu', 'ojs/ojresponsiveutils', 'ojs/ojresponsiveknockoututils', 'ojs/ojnavigationlist'],
   function (Bootstrap, ko, app) { // this callback gets executed when all required modules are loaded
 
       Bootstrap.whenDocumentReady().then(
@@ -63,5 +63,20 @@ require(['ojs/ojbootstrap', 'knockout', 'appController', 'ojs/ojknockout', 'ojs/
           }
         }
       );
+
+    /*function(ko, Bootstrap, ResponsiveUtils, ResponsiveKnockoutUtils)
+      // this callback gets executed when all required modules are loaded
+      {
+          function ViewModel() {
+              // observable for medium and up screens
+              var mdQuery = ResponsiveUtils.getFrameworkQuery(
+                  ResponsiveUtils.FRAMEWORK_QUERY_KEY.MD_UP);
+              this.medium = ResponsiveKnockoutUtils.createMediaQueryObservable(mdQuery);
+          }
+
+          Bootstrap.whenDocumentReady().then(function () {
+              ko.applyBindings(new ViewModel(), document.getElementById('tabbardemo'));
+          });
+      }*/
     }
 );
