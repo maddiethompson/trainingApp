@@ -1,14 +1,9 @@
 {
   "ExpandedNodes": [
-    "",
     "\\src",
-    "\\src\\css",
-    "\\src\\css\\images",
     "\\src\\js",
-    "\\src\\js\\viewModels\\filmStrip",
-    "\\src\\js\\views",
-    "\\src\\js\\views\\filmStrip"
+    "\\src\\js\\viewModels",
+    "\\src\\js\\views"
   ],
-  "SelectedNode": "\\src\\css\\images\\oracle_sample.png",
   "PreviewInSolutionExplorer": false
 }
